@@ -1,12 +1,6 @@
-# Middleman::Emblem
+# Middleman::Emberscript
 
-A simple plugin to support emblem with Middleman
-
-Inspired by https://github.com/GutenYe/middleman-ember-template
-
-A great template but we wanted to add slim/haml style support for ember templates.
-
-Built around the Emblem JS project: https://github.com/machty/emblem.js
+A simple plugin to support emberscript with Middleman
 
 
 ## Full Project Generation
@@ -18,7 +12,7 @@ Check out my other project ([mes](https://github.com/j-mcnally/mes)) which will 
 
 Add this line to your application's Gemfile:
 
-    gem 'middleman-emblem'
+    gem 'middleman-emberscript'
 
 And then execute:
 
@@ -26,21 +20,21 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install middleman-emblem
+    $ gem install middleman-emberscript
 
 ## Usage
 
-add `activate :emblem` to config.rb
+add `activate :emberscript` to config.rb
 
 ## Configuration
 
 by default:
-`activate :emblem, emblem_dir: "templates", emblem_ext: "emblem", ignore: true`
+`activate :emberscript, emblem_ext: "em", ignore: true`
 
 `ignore: true` means it will ignore the "templates" folder when building
 
 but this can be changed in config.rb to something like:
-`activate :emblem, emblem_dir: "templates_slim", emblem_ext: "slim", ignore: false`
+`activate :emberscript, emblem_ext: "ems", ignore: false`
 
 `ignore: false` means you need to *explicity ignore* the "templates" folder in your config.rb when building
 
