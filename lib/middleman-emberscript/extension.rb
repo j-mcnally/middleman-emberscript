@@ -1,3 +1,6 @@
+require 'ember_script'
+
+
 module Middleman
   module Emberscript
     class << self
@@ -5,7 +8,7 @@ module Middleman
       def registered(app, options={})
         sprocket_extension = "em"
         sprocket_extension = options[:emblem_ext] if options.has_key?(:emblem_ext)
-        ::Sprockets.register_engine ".#{sprocket_extension}", 
+        ::Sprockets.register_engine ".#{sprocket_extension}", EmberScript::EmberScriptTemplate
         app.after_configuration do
           ignore "#{js_dir}/**/*.em" unless options.has_key?(:ignore) && !options[:ignore] 
         end
